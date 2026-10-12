@@ -1,6 +1,6 @@
 # Learning log
 
-Newest first. One row per file. Copy [TEMPLATE.md](TEMPLATE.md) for each session.
+Newest first. To add a session, copy [TEMPLATE.md](TEMPLATE.md) to `YYYY-MM-DD-topic.md` and add a row at the top of this table.
 
 | Date | Item | What I can explain | Proof |
 |---|---|---|---|

@@ -1,36 +1,29 @@
 # Roadmap
 
-Personal learning path for **secure automation**, **DevSecOps**, and **secure AI**.
+Learning plan for secure automation, DevSecOps, and secure AI. Computer science student, graduating June 2027. Each item stays open until there is proof: a commit, a pipeline run, or a measured result.
 
-Graduation target: June 2027. The goal is not more course names. The goal is proof you can defend in an interview: a pipeline that blocks a bad change, a policy that stops an unsafe action, and a measured result for an AI system.
+## Now
 
-## How this repo works
+Finish the [Hack Apertus](https://github.com/nourseen6/hack-apertus-redteam) submission by 16 October 2026 with one measured result. After that: Linux and Git, then a security workflow on [Incident Commander](https://github.com/nourseen6/incident-commander).
 
-| File | Use it for |
+## Path
+
+Checklists, resources, and the done test for each item are in [ROADMAP.md](ROADMAP.md). Notes from each session are in [log/](log/).
+
+| When | Focus |
 |---|---|
-| [ROADMAP.md](ROADMAP.md) | The path. Check a box only when the proof exists. |
-| [log/TEMPLATE.md](log/TEMPLATE.md) | Copy this every time you learn something. |
-| [log/](log/) | One file per session. Newest row goes at the top of [log/README.md](log/README.md). |
+| Oct 2026 | Apertus result, and the Incident Commander story on the CV |
+| Nov 2026 | Linux and Git |
+| Dec 2026 – Jan 2027 | Tests, secret scan, and dependency scan on Incident Commander |
+| Jan – Feb 2027 | SentriX security boundaries, and one write-up of the Apertus result |
+| Feb – Mar 2027 | One cloud account, least privilege |
+| Apr – May 2027 | The same policy gate on Kubernetes |
+| May – Jun 2027 | CV, LinkedIn, and this plan say the same thing |
 
-## إزاي تسجّلي
+## Already in place
 
-كل ما تتعلمي حاجة، حتى لو صغيرة:
-
-1. انسخي `log/TEMPLATE.md`.
-2. سمي الملف بالتاريخ والموضوع، مثال: `log/2026-10-18-linux-permissions.md`.
-3. اكتبي المصدر (لينك)، إيه اللي فهمتيه بكلامك، وإيه الدليل.
-4. زودي سطر في أول جدول `log/README.md`.
-5. علمّي البند في `ROADMAP.md` بس لما الدليل يبقى موجود. مشاهدة فيديو مش دليل.
-
-متحفّظيش مفاتيح، توكنز، لاب باسوورد، أو داتا عملاء في الريبو.
-
-## Current focus
-
-**16 October 2026 — close Apertus with one measured result.** Then start the Linux and Git block, and put a security workflow on [Incident Commander](https://github.com/nourseen6/incident-commander).
-
-## Rules
-
-- One active phase at a time. Finish the proof, then move.
-- Resources in the roadmap are starting points. The log is where you record what you actually used.
-- Do not add a tool to a CV or to this roadmap's "can explain" line until you have used it on your own project.
-- Network and firewall work stays as the base you already have. New months go to automation, policy, and AI security.
+- [Incident Commander](https://github.com/nourseen6/incident-commander) — incident response that asks an external policy before it acts, reverts a failed change, and keeps a signed trail
+- [Hack Apertus red team](https://github.com/nourseen6/hack-apertus-redteam) — controlled test of one published model
+- SentriX — graduation project, on-device risk detection and secure alerts
+- EJADA, July 2026 — Splunk, Dynatrace, alerting, container monitoring
+- DEPI / NTI — FortiGate, FortiManager, and the CCNA curriculum ([lab notes](https://github.com/nourseen6/Fortinet-Device-Management-with-FortiManager))

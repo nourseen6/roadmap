@@ -11,8 +11,8 @@ The target is secure automation, DevSecOps, and secure AI. The work that matches
 
 ## Proof
 
-This repo exists so every next skill has a resource, a note, and a done-when test.
+This repo tracks each next skill with a resource, a note, and a done test.
 
-## Stuck / next
+## Next
 
-Finish the Apertus submission by 16 October 2026 with one measured result, a control, and a rate. Then log it here. Do not put it on the CV until that result is real.
+Finish the Apertus submission by 16 October 2026 with one measured result, a control, and a rate. Log it here. It goes on the CV after that result is real.
