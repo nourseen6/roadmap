@@ -1,6 +1,7 @@
 # DevOps Roadmap
 
-My plan to become job-ready as a DevOps engineer, built from advice a senior DevOps engineer gave me in October 2026. Computer science student, graduating June 2027.
+My plan to become job-ready as a DevOps engineer , Computer science student, graduating June 2027.
+*The learning journey never really ends. There’s always something new to learn, another skill to build, and another way to grow. 🚀✨*
 
 **Goal:** learn the core tools hands-on, build three real projects on GitHub, put them on my CV with the right keywords, and send the CV for a referral — in about 12 weeks (19 Oct 2026 → 10 Jan 2027), at 2–3 hours a day.
 
