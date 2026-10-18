@@ -1,146 +1,179 @@
 # Roadmap
 
-A box is checked only when the **Done when** line is true and a file in [log/](log/) links the proof.
+A box is checked only when the **Done when** line is true and a note in [log/](log/) links the proof.
+
+Main course source: the [KodeKloud DevOps Learning Path](https://kodekloud.com/learning-path/devops) — the path the engineer followed himself. Its best part is the labs: a real terminal, a task, and room to make mistakes. Don't memorize optional commands; understand the idea and finish the lab.
 
 ---
 
-## Now — through 31 Oct 2026
+## Phase 1 — Foundations (Weeks 1–2, 19 Oct – 1 Nov)
 
-### Apertus result
+### Week 1 — Linux, networking, YAML, Git
 
-- [ ] **P0-apertus** — Finish the Hack Apertus submission.
-  - **Why:** This is the secure-AI evidence.
-  - **Done when:** The report states one behavior, the paired control, the sample size, and the rate. I can explain the result without opening the raw outputs.
+- [ ] **W1-linux** — Use a Linux shell every day (WSL, a VM, or KodeKloud labs).
+  - **Done when:** I can explain users, permissions, processes, services, SSH keys, and where logs live — and find why a service I started isn't listening.
   - **Resources:**
-    - [nourseen6/hack-apertus-redteam](https://github.com/nourseen6/hack-apertus-redteam)
-    - [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) — labels for the finding, after the measurement exists
-  - **CV line, after it is true:** target model, the behavior measured, the control, and the rate.
-
-### Incident Commander on the CV
-
-- [ ] **P0-story** — The CV names the security behavior, and matches the commits that are mine.
-  - **Why:** The public repo already describes policy-as-code, fail-closed behavior, auto-revert, and a signed trail.
-  - **Done when:** The CV bullet matches those commits only. Any number on the page is one I can walk through.
+    - KodeKloud: *DevOps Prerequisite Course* (6.5 h)
+    - [Linux Journey](https://linuxjourney.com/)
+    - [Bandit, levels 0–15](https://overthewire.org/wargames/bandit/) — shell practice
+- [ ] **W1-git** — Branch, commit, merge, revert, and read history.
+  - **Done when:** I can do a pull request flow on my own repo and every commit message says what changed and why.
   - **Resources:**
-    - [nourseen6/incident-commander](https://github.com/nourseen6/incident-commander)
-    - [Open Policy Agent docs](https://www.openpolicyagent.org/docs/latest/)
-
----
-
-## Phase 1 — Linux and Git (Nov 2026)
-
-- [ ] **P1-linux** — Use a Linux shell for labs (WSL or a small VM).
-  - **Done when:** I can explain users, permissions, processes, SSH keys, and where logs are, on a machine I set up. I can find why a service I started is not listening.
-  - **Resources:**
-    - [The Linux command line for beginners (Ubuntu)](https://ubuntu.com/tutorials/command-line-for-beginners)
-    - [Linux Journey](https://linuxjourney.com/) — paths, permissions, processes, packages
-    - [Bandit, levels 0–15](https://overthewire.org/wargames/bandit/) — shell practice. The log records the command I learned.
-- [ ] **P1-git** — History I am willing to show.
-  - **Done when:** I can branch, commit, revert, and read `git log` / `git diff` on Incident Commander. Each of my commits says what changed.
-  - **Resources:**
+    - KodeKloud: *Git for Beginners* (1.25 h)
     - [Pro Git, chapters 1–3](https://git-scm.com/book/en/v2)
-    - [GitHub — about Git](https://docs.github.com/en/get-started/using-git/about-git)
 
-**Phase proof:** one log of a Linux problem I diagnosed, plus three commits whose messages say why.
+### Week 2 — Scripting
+
+- [ ] **W2-bash** — Write three small scripts: a backup, a health check, and a log parser.
+  - **Done when:** They're in a repo, each with a usage line, and I can explain every line.
+  - **Resources:** KodeKloud: *Shell Scripts for Beginners* (2 h)
+- [ ] **W2-python** — Basic Python for automation: files, JSON, HTTP requests, calling CLI tools.
+  - **Done when:** One of the three scripts is rewritten in Python.
+
+**Phase proof:** a repo with the scripts, plus one log note about a Linux problem I diagnosed.
 
 ---
 
-## Phase 2 — Secure pipeline (Dec 2026 – Jan 2027)
+## Phase 2 — Containers and CI/CD (Weeks 3–4, 2 – 15 Nov)
 
-This lands on Incident Commander, not a new demo app.
+### Week 3 — Docker
 
-- [ ] **P2-docker** — Build and run the existing stack, and explain image vs container, ports, and why the policy engine is a separate container.
-  - **Done when:** A clean clone starts, and I can say what fails closed if OPA is down.
+- [ ] **W3-docker** — Containerize an app with a frontend, a backend, and a database.
+  - **Done when:** A multi-stage Dockerfile builds a small image, `docker compose up` runs all three services, and the image is pushed to Docker Hub.
   - **Resources:**
+    - KodeKloud: *Docker for Absolute Beginners* (4 h)
     - [Docker — get started](https://docs.docker.com/get-started/)
-    - Incident Commander quickstart
-- [ ] **P2-actions** — GitHub Actions runs the tests on every push and pull request.
-  - **Done when:** A pull request shows a green test check, and the workflow file is in the repo.
-  - **Resources:**
-    - [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-- [ ] **P2-scan** — The same workflow fails on a secret and on a known-bad dependency or image, then passes after the fix.
-  - **Done when:** There is a red run and a green run. The planted secret never lands on the default branch.
-  - **Resources:**
-    - [gitleaks](https://github.com/gitleaks/gitleaks)
-    - [Trivy](https://trivy.dev/latest/docs/)
-    - [Bandit](https://bandit.readthedocs.io/en/latest/) or [Semgrep](https://semgrep.dev/docs/getting-started/)
-    - [About secret scanning](https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning)
-- [ ] **P2-name** — Draw the pipeline from commit to deploy and name where each control sits.
-  - **Resources:**
-    - [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/) — map the stages onto the workflow in a log
 
-**Phase proof:** the red run and the green run.
+### Week 4 — Jenkins and GitHub Actions
+
+- [ ] **W4-jenkins** — A declarative `Jenkinsfile` with stages: build → test → docker build → push.
+  - **Done when:** A push to GitHub triggers the pipeline and a new image appears in the registry.
+  - **Resources:**
+    - KodeKloud: *Jenkins for Beginners* (4.3 h)
+    - [Jenkins pipeline docs](https://www.jenkins.io/doc/book/pipeline/)
+- [ ] **W4-actions** — The same pipeline as a GitHub Actions workflow.
+  - **Done when:** A pull request shows a green check, and I can say when I'd pick Actions over Jenkins.
+  - **Resources:** [Understanding GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions)
+
+**Phase proof:** a green pipeline run and the image in the registry.
 
 ---
 
-## Phase 3 — Secure AI, written down (Jan – Feb 2027)
+## Phase 3 — Kubernetes (Weeks 5–6, 16 – 29 Nov) — the most important part
 
-- [ ] **P3-llm-map** — Map the Apertus result to one OWASP LLM risk.
-  - **Done when:** A short note names the risk, why the test matches it, and what it does not claim.
-  - **Resources:** [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)
-- [ ] **P3-sentrix** — One security page for SentriX.
-  - **Done when:** The page states the assets, the trust boundaries (device, phone, cellular, cloud), what is authenticated, and what still leaves the device. Every sentence matches the current build.
+- [ ] **W5-k8s-core** — Pods, Deployments, ReplicaSets, Services, Namespaces.
+  - **Done when:** I can deploy the Week 3 app to a local cluster ([kind](https://kind.sigs.k8s.io/) or [minikube](https://minikube.sigs.k8s.io/)), kill a pod, and watch it come back.
   - **Resources:**
-    - SentriX graduation-project notes
-    - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
-- [ ] **P3-otel** — Connect observability to the automation story.
-  - **Done when:** I can trace one Incident Commander incident from a signal to a policy decision, and describe the EJADA Splunk / Dynatrace work in the same terms: signal, question, action.
-  - **Resources:** [What is OpenTelemetry?](https://opentelemetry.io/docs/what-is-opentelemetry/)
+    - KodeKloud: *Kubernetes for Beginners* (6 h) + lots of labs
+    - [Kubernetes basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+- [ ] **W6-k8s-config** — ConfigMaps, Secrets, Ingress, probes, resource limits.
+  - **Done when:** The frontend is reachable through an Ingress, the backend and DB are not reachable from outside, and config comes from a ConfigMap/Secret.
+- [ ] **W6-helm** — Package the app as a Helm chart.
+  - **Done when:** `helm install` deploys the whole app.
+  - **Resources:** [Helm docs](https://helm.sh/docs/)
+
+**Phase proof:** manifests + Helm chart in a repo, and a screenshot of `kubectl get all`.
 
 ---
 
-## Phase 4 — One cloud, IAM only (Feb – Mar 2027)
+## Phase 4 — Cloud and Infrastructure as Code (Weeks 7–8, 30 Nov – 13 Dec)
 
-One of AWS or Azure. The second cloud waits until after graduation.
+### Week 7 — AWS and GCP basics
 
-- [ ] **P4-iam** — A personal account with a budget alarm, MFA on the admin identity, and a role that can do one thing.
-  - **Done when:** I can show a policy that was too wide, the narrower policy that replaced it, and that no long-lived key is in git.
+**Before anything:** create a budget alert of $10 and turn on MFA. ([AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html))
+
+- [ ] **W7-aws** — The basics he called "must know":
+  - **Compute:** EC2 and instance types
+  - **Storage:** S3 buckets; disk types (HDD, SSD, gp3)
+  - **Networking:** VPC, public/private subnets, NAT gateway, VPN, security groups
+  - **Identity:** IAM users, roles, least-privilege policies
+  - **Database:** RDS
+  - **Done when:** I've created a VM and a bucket by hand and can draw the VPC they sit in.
+  - **Resources:** KodeKloud AWS playground; [AWS Cloud Practitioner Essentials](https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/)
+- [ ] **W7-serverless** — Deploy a container to GCP Cloud Run (or AWS Lambda).
+  - **Done when:** It answers a request from a public URL, and I can explain the cost difference vs. EC2.
+  - **Resources:** [Cloud Run docs](https://cloud.google.com/run/docs)
+
+### Week 8 — Terraform
+
+- [ ] **W8-terraform** — VPC + EC2 + S3 written in Terraform. No ClickOps.
+  - **Done when:** `terraform apply` builds it, `terraform destroy` removes it, state lives in a remote backend (S3), and I've used at least one module.
   - **Resources:**
-    - AWS: [IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) and [AWS Cloud Practitioner Essentials](https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/)
-    - Azure: [Azure Fundamentals — cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/) and [Azure RBAC best practices](https://learn.microsoft.com/en-us/azure/role-based-access-control/best-practices)
-- [ ] **P4-exam** — Optional. A practitioner exam only after P4-iam is logged.
-  - **Done when:** The badge matches an account I can open and explain.
+    - KodeKloud: *Terraform for Beginners* (4.75 h)
+    - [Terraform AWS tutorials](https://developer.hashicorp.com/terraform/tutorials/aws-get-started)
+
+**Phase proof:** the Terraform repo and a log note of the `plan` output.
 
 ---
 
-## Phase 5 — Same policy, on Kubernetes (Apr – May 2027)
+## Phase 5 — The three projects (Weeks 9–11, 14 Dec – 3 Jan)
 
-The cluster adapter already named on Incident Commander. Not a separate tutorial cluster.
+Every project repo needs: a README with an **architecture diagram**, steps to run it, screenshots, what I learned, and the problems I hit.
 
-- [ ] **P5-k8s** — Run a local cluster and deploy one service from a manifest I wrote.
-  - **Done when:** I can explain Pod, Deployment, Service, and what a probe does, on that cluster.
-  - **Resources:** [Kubernetes basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
-- [ ] **P5-gate** — One state-changing cluster action is allowed or denied by a policy outside the caller.
-  - **Done when:** I can show an allow, a deny, and fail-closed behavior when the policy service is unreachable.
-  - **Resources:**
-    - [OPA](https://www.openpolicyagent.org/docs/latest/)
-    - Existing Rego policies in Incident Commander
+### Week 9 — Project 1: 3-tier app on AWS EKS
+
+The project the engineer built himself.
+
+- [ ] **P1-eks** — Architecture:
+  - **Frontend:** 2 pods
+  - **Backend:** 2 pods; the frontend calls it through an internal API
+  - **Database:** AWS RDS (PostgreSQL); only the backend can reach it
+  - **From outside:** a Load Balancer / Ingress reaches the frontend only. Backend and DB stay private.
+  - **Steps:** create the cluster with Terraform → choose the node count → connect with `aws eks update-kubeconfig` and `kubectl` → create RDS → deploy frontend and backend → test the routing → destroy everything.
+  - **Done when:** The repo is complete and I can answer "how did you create the cluster? how did you connect to it?"
+  - **Cost warning:** EKS is billed by the hour even when idle. Build it over 2–3 days and run `terraform destroy` at the end of every day.
+
+### Week 10 — Ansible + Project 2: DevSecOps pipeline
+
+- [ ] **W10-ansible** — A playbook that installs Docker and Nginx on a VM created with Terraform.
+  - **Resources:** KodeKloud: *Ansible for Beginners* (2.75 h); [Ansible docs](https://docs.ansible.com/)
+- [ ] **P2-devsecops** — Pipeline:
+  1. Jenkins (or GitHub Actions) pulls the code from GitHub
+  2. Docker builds the image
+  3. **Trivy** scans the image — the pipeline **fails on CRITICAL**
+  4. Push the image to ECR or Docker Hub
+  5. Deploy to the Project 1 cluster
+  6. **Dependabot** is on and opens PRs for outdated dependencies
+  - **Done when:** There is a red run (a planted vulnerable image) and a green run after the fix.
+  - **Optional:** SonarQube for code analysis; gitleaks for secrets.
+  - **Resources:** [Trivy](https://trivy.dev/latest/docs/), [Dependabot](https://docs.github.com/en/code-security/dependabot)
+
+### Week 11 — Monitoring + Project 3: LLM gateway with LiteLLM
+
+- [ ] **W11-monitoring** — Install Prometheus and Grafana on my cluster.
+  - **Done when:** One dashboard and one alert that I triggered on purpose.
+  - **Resources:** KodeKloud: *Prometheus Certified Associate* (first part only) + *Grafana Loki*; [Prometheus](https://prometheus.io/docs/introduction/overview/), [Grafana](https://grafana.com/docs/grafana/latest/)
+- [ ] **P3-litellm** — An LLM gateway, like the one his team runs:
+  - Deploy the LiteLLM proxy with Docker on a VM or Cloud Run
+  - Connect one or two providers (some have a free tier)
+  - Create a virtual key per "user", each with a budget
+  - Turn on logging and show usage in Grafana
+  - All infrastructure in Terraform
+  - **Done when:** A request over budget is rejected, and the dashboard shows usage per key.
+  - **Resources:** [LiteLLM docs](https://docs.litellm.ai/)
 
 ---
 
-## Before applications (May – Jun 2027)
+## Phase 6 — CV and referral (Week 12, 4 – 10 Jan)
 
-- [ ] **P6-cv** — CV, LinkedIn, and this roadmap agree.
-  - **Done when:** Each strong line has a repo, a log, or a write-up behind it.
-- [ ] **P6-stories** — Three stories, under two minutes each: the pipeline, the policy gate, and the AI measurement or SentriX boundaries.
+- [ ] **W12-cv** — Update the CV using the rules in [NOTES.md](NOTES.md#cv).
+- [ ] **W12-interview** — KodeKloud: *DevOps Interview Preparation* (5.5 h), plus the questions in [NOTES.md](NOTES.md#interview-questions).
+- [ ] **W12-cert** — Optional, only if time allows: AWS Cloud Practitioner or Terraform Associate. Not required for the referral.
+
+### Checklist before sending the CV
+
+- [ ] Project 1 (EKS) on GitHub and working, with README and diagram
+- [ ] Project 2 (DevSecOps) with Trivy and Dependabot
+- [ ] Project 3 (LiteLLM), or at least a simple version of it
+- [ ] I can explain each project in 2 minutes: the problem, the architecture, the tools, and the hardest error
+- [ ] I can answer: Docker vs Kubernetes? EC2 vs Cloud Run? Why Terraform instead of the console? How do you connect to a cluster?
+- [ ] The CV is one page, skills are grouped, every project has a link
+- [ ] A short message to the engineer: thanks for the meeting, what I built from his advice, the project links, and whether there's an open position he could refer me to
 
 ---
 
-## Foundation
+## Later — not before the referral
 
-Already done. I log something here only when I go deeper for a real reason.
-
-- FortiGate 7.6 policies, IPS, NAT, VPN, VLANs, FortiManager (DEPI / NTI, 120+ hours) — [lab repo](https://github.com/nourseen6/Fortinet-Device-Management-with-FortiManager)
-- Cisco CCNA curriculum completed. Not a CCNA certification.
-- EJADA, July 2026: Splunk, Dynatrace, alerting, container monitoring
-- Python IDS pipeline and the Packet Tracer enterprise lab — one CV line each
-
-## Later
-
-Not a phase before June 2027:
-
-- Another Packet Tracer topology
-- Another generic intrusion-detection classifier
-- A second cloud
-- A certificate before the IAM lab exists
-- Kubernetes, Terraform, or LLM security on the CV before the matching proof above is logged
+- Golang (optional in the KodeKloud path — Python first)
+- A second certification
+- Advanced Kubernetes (operators, service mesh)

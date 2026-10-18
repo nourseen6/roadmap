@@ -1,6 +1,6 @@
 # YYYY-MM-DD — short title
 
-- **Roadmap item:** `P1-linux`
+- **Roadmap item:** `W1-linux`
 - **Time:** 1h
 - **Resource:** [title](https://example.com)
 - **Secrets check:** no keys, tokens, lab passwords, or customer data in this note
