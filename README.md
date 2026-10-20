@@ -1,65 +1,77 @@
 # DevOps Roadmap
 
-My plan to become job-ready as a DevOps engineer , Computer science student, graduating June 2027.
-*The learning journey never really ends. There’s always something new to learn, another skill to build, and another way to grow. 🚀✨*
+A practical, project-based roadmap for anyone who wants to become a DevOps engineer — from Linux basics to Kubernetes on AWS.
 
-**Goal:** learn the core tools hands-on, build three real projects on GitHub, put them on my CV with the right keywords, in about 3 months (12 weeks, 19 Oct 2026 → 10 Jan 2027), at 4–5 hours a day.
+*The learning journey never really ends. There's always something new to learn, another skill to build, and another way to grow. 🚀✨*
 
-**Rule:** an item is done only when there is proof — a repo, a pipeline run, or a screenshot — and I can explain it without notes.
+It follows the [KodeKloud DevOps Learning Path](https://kodekloud.com/learning-path/devops) — the path many working DevOps engineers recommend — and adds a free source for every topic, so you can study with or without a subscription. Everything ends in **three real projects** you can put on your CV.
 
-## Where to look
+## How this repo is organized
 
 | File | What's in it |
 |---|---|
-| [ROADMAP.md](ROADMAP.md) | The week-by-week plan: checklists, resources, and the "done when" test for each item |
-| [STUDY-GUIDE.md](STUDY-GUIDE.md) | The KodeKloud path topic by topic, with a free place to learn and practice each one |
-| [NOTES.md](NOTES.md) | What each tool is for, concepts I must not mix up, CV rules, interview questions |
-| [log/](log/) | One note per study session, with the proof |
+| [ROADMAP.md](ROADMAP.md) | Every topic, in order — with the KodeKloud course, free sources, and hands-on practice for each |
+| [PROJECTS.md](PROJECTS.md) | The 3 projects, the skills each one covers, the steps, and how to write them on your CV |
+| [CONCEPTS.md](CONCEPTS.md) | What each tool is for, concepts people mix up, CV tips, and interview questions |
 
-## Priorities
+## The map
 
-1. **Must have:** Linux + Git, Docker, **Kubernetes** (he said "very, very, very important"), Terraform, Jenkins, Cloud (AWS first, then GCP)
-2. **Important:** GitHub Actions, Ansible, Serverless (Cloud Run / Lambda)
-3. **What makes me stand out:** DevSecOps (Trivy, Dependabot), Monitoring (Prometheus + Grafana), MLOps / LiteLLM (the work his team actually does)
-
-Plus, always: **write code** (Python and Bash, using AI to go faster), and **draw the architecture before building anything** — where traffic comes from, where it goes, what is public and what is private.
-
-## The 12 weeks at a glance
-
-| Week | Dates | Focus | Output |
+| # | Stage | Main tools | Used in project |
 |---|---|---|---|
-| 1 | 19 – 25 Oct | Linux, networking, YAML, Git | Daily Linux labs, a clean GitHub repo |
-| 2 | 26 Oct – 1 Nov | Bash + basic Python | 3 small scripts |
-| 3 | 2 – 8 Nov | Docker | Multi-stage Dockerfile + docker-compose app |
-| 4 | 9 – 15 Nov | CI/CD: Jenkins + GitHub Actions | Pipeline that builds and pushes an image |
-| 5–6 | 16 – 29 Nov | **Kubernetes** | App running on a local cluster |
-| 7 | 30 Nov – 6 Dec | AWS + GCP basics | VM, bucket, and a Cloud Run service |
-| 8 | 7 – 13 Dec | Terraform | VPC + EC2 + S3 as code, remote state |
-| 9 | 14 – 20 Dec | **Project 1:** 3-tier app on AWS EKS | Repo with README + diagram |
-| 10 | 21 – 27 Dec | Ansible + **Project 2:** DevSecOps pipeline | Pipeline with Trivy + Dependabot |
-| 11 | 28 Dec – 3 Jan | Prometheus + Grafana + **Project 3:** LiteLLM gateway | Dashboard + LLM gateway |
-| 12 | 4 – 10 Jan | CV + interview prep | New CV sent to the engineer |
+| 1 | Basics: DevOps, networking, applications | Linux, networking, YAML | 1, 2, 3 |
+| 2 | Programming and scripting | Python, Bash | 1 |
+| 3 | Version control | Git, GitHub | 1, 2, 3 |
+| 4 | Containers | Docker, Docker Compose | 1, 2, 3 |
+| 5 | CI/CD | Jenkins, GitHub Actions | 1 |
+| 6 | Container orchestration | Kubernetes, Helm | 2 |
+| 7 | Cloud | AWS, GCP (Cloud Run) | 2, 3 |
+| 8 | Automation | Ansible | 3 |
+| 9 | Infrastructure as Code | Terraform | 2, 3 |
+| 10 | DevSecOps | gitleaks, Trivy, Dependabot | 1 |
+| 11 | Observability | Prometheus, Grafana, Loki | 2, 3 |
+| 12 | Interview preparation | — | — |
 
-More time some weeks? Merge two weeks into one — the whole plan fits in 6 weeks at full speed.
+## The 3 projects
 
-## The three projects
-
-| # | Project | Why |
+| # | Project | Skills |
 |---|---|---|
-| 1 | **3-tier app on AWS EKS** — frontend, backend, RDS, Terraform | The project he built himself; covers Kubernetes, AWS, and IaC |
-| 2 | **DevSecOps pipeline** — Jenkins/Actions, Docker, Trivy, Dependabot | Builds on my network-security background |
-| 3 | **LLM gateway with LiteLLM** — virtual keys, budgets, Grafana | Exactly what his team does; the strongest CV line for this role |
+| 1 | **Secure CI/CD Pipeline (DevSecOps)** | Python, Docker, GitHub Actions, Jenkins, gitleaks, Trivy, Dependabot |
+| 2 | **Kubernetes Platform on AWS** ⭐ | Terraform, AWS (VPC, EKS, RDS, IAM), Kubernetes, Helm, autoscaling, Prometheus, Grafana |
+| 3 | **AI Gateway with LiteLLM** | Terraform, Ansible, LiteLLM, Grafana, Cloud Run (serverless) |
 
-## Every week, alongside the courses
+Details in [PROJECTS.md](PROJECTS.md).
 
-- [ ] One task a day from the free [KodeKloud 100 Days of DevOps](https://kodekloud.com/100-days-of-devops) challenge
-- [ ] Every error I hit and how I fixed it goes into [log/](log/) — this is what interviews ask about
-- [ ] A short update to the engineer every two weeks: "I finished X, here's the repo"
+## Choose your pace
 
-## Already in place
+| Pace | Time | How |
+|---|---|---|
+| **Intensive** | ~3 weeks, 4–5 h/day | Learn each topic *while* building the projects — one project per week |
+| **Part-time** | ~3 months, 2–3 h/day | Go through [ROADMAP.md](ROADMAP.md) stage by stage, then build the projects |
 
-- [Incident Commander](https://github.com/nourseen6/incident-commander) — incident response with an external policy check, auto-revert, and a signed trail (a good app to run Project 2's pipeline on)
-- [Hack Apertus red team](https://github.com/nourseen6/hack-apertus-redteam) — controlled test of one published model
-- SentriX — graduation project, on-device risk detection and secure alerts
-- EJADA, July 2026 — Splunk, Dynatrace, alerting, container monitoring
-- DEPI / NTI — FortiGate, FortiManager, and the CCNA curriculum ([lab notes](https://github.com/nourseen6/Fortinet-Device-Management-with-FortiManager))
+## How to study
+
+Every day:
+
+1. **Understand (30–45 min):** read or watch the topic — the KodeKloud course or a free source.
+2. **Do it (1–3 h):** a lab, or the next step of your project. This is the part that matters.
+3. **Write it down (10 min):** what you did, what broke, and how you fixed it. These become your interview stories.
+
+Use AI as a teacher, not a doer: *"I'm following this step — teach me what it does before I run it."*
+
+## Rules
+
+- A topic is done only when you've done it in a terminal and can explain it out loud.
+- One project you fully understand beats three you copied.
+- Never put anything on your CV that you didn't build yourself — interviewers will ask "how did you create the cluster?"
+- **Cloud costs money.** Set a $10 budget alert before anything else, and `terraform destroy` at the end of every session.
+
+## Free practice environments
+
+- [Killercoda](https://killercoda.com/) — real terminals in the browser: Linux, Docker, Kubernetes, Ansible, Terraform
+- [Play with Docker](https://labs.play-with-docker.com/)
+- [KodeKloud free account](https://kodekloud.com/) — free courses, some labs, and [100 Days of DevOps](https://kodekloud.com/100-days-of-devops)
+- Your own laptop: WSL (Ubuntu) + Docker Desktop + kind or minikube
+
+---
+
+Maintained by [@nourseen6](https://github.com/nourseen6). Found a broken link or a better free source? Open an issue or a pull request.
