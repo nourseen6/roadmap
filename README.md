@@ -12,6 +12,7 @@ My plan to become job-ready as a DevOps engineer , Computer science student, gra
 | File | What's in it |
 |---|---|
 | [ROADMAP.md](ROADMAP.md) | The week-by-week plan: checklists, resources, and the "done when" test for each item |
+| [STUDY-GUIDE.md](STUDY-GUIDE.md) | The KodeKloud path topic by topic, with a free place to learn and practice each one |
 | [NOTES.md](NOTES.md) | What each tool is for, concepts I must not mix up, CV rules, interview questions |
 | [log/](log/) | One note per study session, with the proof |
 
