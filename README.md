@@ -2,7 +2,7 @@
 
 A practical, project-based roadmap for anyone who wants to become a DevOps engineer — from Linux basics to Kubernetes on AWS.
 
-*The learning journey never really ends. There's always something new to learn, another skill to build, and another way to grow. 🚀✨*
+*The learning journey never really ends. There's always something new to learn, another skill to build, and another way to grow. *
 
 It follows the [KodeKloud DevOps Learning Path](https://kodekloud.com/learning-path/devops) — the path many working DevOps engineers recommend — and adds a free source for every topic, so you can study with or without a subscription. Everything ends in **three real projects** you can put on your CV.
 
