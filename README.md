@@ -3,7 +3,7 @@
 My plan to become job-ready as a DevOps engineer , Computer science student, graduating June 2027.
 *The learning journey never really ends. There’s always something new to learn, another skill to build, and another way to grow. 🚀✨*
 
-**Goal:** learn the core tools hands-on, build three real projects on GitHub, put them on my CV with the right keywords, in about 3 weeks (19 Oct 2026 → 19 Jan 2027), at 4–5 hours a day.
+**Goal:** learn the core tools hands-on, build three real projects on GitHub, put them on my CV with the right keywords, in about 3 months (12 weeks, 19 Oct 2026 → 10 Jan 2027), at 4–5 hours a day.
 
 **Rule:** an item is done only when there is proof — a repo, a pipeline run, or a screenshot — and I can explain it without notes.
 
